@@ -1,0 +1,131 @@
+body {
+  padding: 0;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  background-image: url(../images/background.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.scores {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  font-size: 2rem;
+  padding: 10px;
+  background-color: silver;
+  border-radius: 10px;
+  width: 15%;
+}
+
+/* .scores > h2,
+p {
+  text-align: left;
+  margin-left: 10px;
+} */
+
+#game-intro {
+  padding: 20px 0px;
+}
+
+#game-container {
+  display: flex;
+  width: 100vw;
+  padding: 20px 0px;
+  justify-content: center;
+}
+
+#game-screen {
+  display: none;
+  align-content: center;
+  padding: 20px 0px;
+  overflow: hidden;
+  position: relative;
+  /* background-image: url(../images/road.png); */
+  background-image: url(../images/sky.jpg);
+  background-size: cover;
+  animation: slide 5s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    background-position: 0 -1000px;
+  }
+  95% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 50px;
+  }
+}
+
+#game-end {
+  display: none;
+  /* background-image: url(../images/crashed.png); */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+}
+
+.game-intro p {
+  font-size: 18px;
+  font-family: "Verdana";
+}
+
+body button {
+  font-size: 30px;
+  background-color: #870007;
+  color: #fff;
+  padding: 10px 20px;
+  border: 0;
+  box-shadow: 0;
+  /* border-radius: 30px; */
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-bottom: 20px;
+  transform: scaleX();
+}
+
+body button:hover {
+  background-color: blue;
+  transition: 1s;
+  cursor: pointer;
+  animation: shake 0.3s infinite;
+}
+
+@-webkit-keyframes shake {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(2px, 2px) rotate(2deg);
+  }
+
+  50% {
+    transform: translate(-2px, -2px) rotate(-2deg);
+  }
+
+  75% {
+    transform: translate(3px, -2px) rotate(3deg);
+  }
+
+  100% {
+    transform: translate(-2px, 2px) rotate(-2deg);
+  }
+}
+
+.inputBox {
+  position: relative;
+  /* width: 250px; */
+}
+
+.inputBox input {
+  width: 30%;
+  padding: 10px;
+  border: 5px solid blue;
+  border-radius: 6px;
+  outline: none;
+  font-size: 1.5em;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
